@@ -8,8 +8,15 @@ const { Navigator, Screen } = createBottomTabNavigator()
 export function BottomBar() {
     return (
         <Navigator>
-            <Screen name="home" component={Home} />
-            <Screen name="portifolio" component={Portifolio} />
+            <Screen name="home" options={{
+                title: 'Home'
+            }} component={Home} />
+            <Screen
+                name="portifolio"
+                options={{
+                    title: 'Portifolio'
+                }}
+                component={Portifolio} />
         </Navigator>
     )
 }

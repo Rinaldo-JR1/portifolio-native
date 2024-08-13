@@ -1,15 +1,16 @@
 import React from 'react';
-import { Text, View } from 'react-native';
+import { Button, Image, Text, View } from 'react-native';
 
 import { styles } from './Styles';
 import { StatusBar } from 'expo-status-bar';
-
+import { Profile } from '../../components/Profile/Profile';
+import { Socials } from '../../components/socials/Socials';
 export function Home() {
     return (
         <View style={styles.container}>
-            <Text>Home works</Text>
+            <Profile />
+            <Socials />
             <StatusBar style="auto" />
-
         </View>
     );
 }

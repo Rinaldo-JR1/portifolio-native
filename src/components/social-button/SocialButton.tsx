@@ -1,11 +1,20 @@
 import React from 'react';
-import { Pressable, Text, View } from 'react-native';
+import { Alert, Pressable, Text, View } from 'react-native';
+import { Linking } from 'react-native'
 
 import { styles } from './Styles';
 
-export function SocialButton({ buttonBackgroundColor, icon, name }: SocialButtonProps) {
+export function SocialButton({ buttonBackgroundColor, icon, name, url }: SocialButtonProps) {
+    const onPress = async () => {
+        if (await Linking.canOpenURL(url)) {
+            Linking.openURL(url)
+        } else {
+            Alert.alert("Erro", "Não foi possível abrir o link")
+        }
+    }
+
     return (
-        <Pressable style={[styles.container, { backgroundColor: buttonBackgroundColor }]}>
+        <Pressable onPress={onPress} style={[styles.container, { backgroundColor: buttonBackgroundColor }]}>
             <View style={{ marginRight: 10 }}>
                 {icon}
             </View>

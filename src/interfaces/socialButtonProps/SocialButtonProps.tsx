@@ -1,5 +1,6 @@
 interface SocialButtonProps {
     name: string,
     icon: React.ReactNode;
-    buttonBackgroundColor: string
+    buttonBackgroundColor: string,
+    url: string
 }

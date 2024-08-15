@@ -3,17 +3,17 @@ import { Image, Text, View } from 'react-native';
 
 import { styles } from './Styles';
 import { StarList } from '../star-list/StarList';
-import reactLogo from '../../../assets/skills/react.png'
+import { SkillProps } from '../../interfaces/skillProps/SkillProps';
 
-export function Skill() {
+export function Skill({ skillImage, skillName, stars }: SkillProps) {
     return (
         <>
             <View style={{ justifyContent: "center", alignItems: "center" }}>
-                <Image source={reactLogo} style={{ width: 150, height: 150 }} />
+                <Image source={skillImage} style={{ width: 130, height: 130 }} />
             </View>
             <View style={styles.stats}>
-                <Text>React</Text>
-                <StarList stars={5} />
+                <Text>{skillName}</Text>
+                <StarList stars={stars} />
             </View>
         </>
     );

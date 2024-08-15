@@ -10,7 +10,7 @@ export function Profile() {
             <Image source={rinaldo} style={{ width: 200, height: 200, borderRadius: 100 }} />
             <Text style={styles.name}>Rinaldo Uchoa</Text>
             <Text style={styles.description}>
-                Desenvolvedor Junior Full stack
+                Desenvolvedor Junior
             </Text>
         </View>
     );

@@ -5,19 +5,17 @@ export const starBuilder = (stars: number, iconSize?: number) => {
     const decimalPart = stars % 1;
     const integerPart = Math.floor(stars);
     const starsArray = [];
-
-    console.log(integerPart);
     for (let i = 0; i < max; i++) {
         if (i < integerPart) {
             starsArray.push(
-                <FontAwesome key={i} name="star" size={iconSize || 32} color={"gold"} />
+                <FontAwesome key={i} name="star" size={iconSize || 25} color={"gold"} />
             );
         } else if (i === integerPart && decimalPart > 0) {
             starsArray.push(
                 <FontAwesome
                     key={i}
                     name="star-half-o"
-                    size={iconSize || 20}
+                    size={iconSize || 25}
                     color={"gold"}
 
                 />
@@ -27,7 +25,7 @@ export const starBuilder = (stars: number, iconSize?: number) => {
                 <FontAwesome
                     key={i}
                     name="star-o"
-                    size={iconSize || 20}
+                    size={iconSize || 25}
                     color={"gold"}
                 />
             );

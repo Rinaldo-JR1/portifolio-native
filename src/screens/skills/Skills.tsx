@@ -1,14 +1,19 @@
 import React from 'react';
-import { View } from 'react-native';
+import { SafeAreaView, ScrollView, View } from 'react-native';
 
 import { styles } from './Styles';
-import { StatusBar } from 'expo-status-bar';
 import { Skill } from '../../components/skill/Skill';
+import { skillsConst } from '../../consts/skillsConsts';
 export function Skills() {
+    const skillsMaped = skillsConst.map((skill, index) => {
+        return <Skill key={index} skillName={skill.skillName} skillImage={skill.skillImage} stars={skill.stars} />
+    })
+
     return (
-        <View style={styles.container}>
-            <Skill />
-            <StatusBar style="auto" />
-        </View>
+        <SafeAreaView style={styles.container}>
+            <ScrollView>
+                {skillsMaped}
+            </ScrollView>
+        </SafeAreaView>
     );
 }

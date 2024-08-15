@@ -7,14 +7,14 @@ import { SkillProps } from '../../interfaces/skillProps/SkillProps';
 
 export function Skill({ skillImage, skillName, stars }: SkillProps) {
     return (
-        <>
+        <View style={styles.container}>
             <View style={{ justifyContent: "center", alignItems: "center" }}>
-                <Image source={skillImage} style={{ width: 130, height: 130 }} />
+                <Image source={skillImage} style={styles.logo} />
             </View>
             <View style={styles.stats}>
-                <Text>{skillName}</Text>
+                <Text style={styles.skillName}>{skillName}</Text>
                 <StarList stars={stars} />
             </View>
-        </>
+        </View>
     );
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { SocialButton } from '../social-button/SocialButton';
 
-import { buttons } from './buttons';
+import { buttons } from '../../consts/buttons';
 
 export function Socials() {
     const buildButtons = () => {
@@ -18,7 +18,6 @@ export function Socials() {
     return (
         <View style={{ justifyContent: "center", alignItems: "center", gap: 14 }}>
             {buildButtons()}
-
         </View>
     );
 }

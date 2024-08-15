@@ -1,6 +1,6 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Home } from '../screens/home/Home';
-import { Portifolio } from '../screens/portifolio/Portifolio';
+import { Skills } from '../screens/skills/Skills';
 
 
 const { Navigator, Screen } = createBottomTabNavigator()
@@ -12,11 +12,11 @@ export function BottomBar() {
                 title: 'Home'
             }} component={Home} />
             <Screen
-                name="portifolio"
+                name="skills"
                 options={{
-                    title: 'Portifolio'
+                    title: 'Skills'
                 }}
-                component={Portifolio} />
+                component={Skills} />
         </Navigator>
     )
 }

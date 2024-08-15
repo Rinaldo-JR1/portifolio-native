@@ -7,9 +7,10 @@ const { Navigator, Screen } = createBottomTabNavigator()
 
 export function BottomBar() {
     return (
-        <Navigator>
+        <Navigator initialRouteName='home'>
             <Screen name="home" options={{
                 title: 'Home',
+
                 tabBarIcon: ({ color }) => <AntDesign name="home" size={24} color={color} />
             }} component={Home} />
             <Screen
